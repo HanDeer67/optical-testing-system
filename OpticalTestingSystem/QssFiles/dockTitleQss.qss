@@ -1,0 +1,25 @@
+QToolButton {
+    margin: 0px; /* 如果需要统一设置外边距 */
+    color: white;
+    border: 1px solid rgb(192,220,245);
+    background:  rgb(192,220,245);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+
+QToolButton:hover{
+background: lightgrey; /* 悬停时按钮背景 */
+border: 1px solid dimgrey; /* 点击时的边框 */
+
+}
+
+QToolButton:pressed {
+    background: dimgrey; /* 点击时按钮背景 */
+    border: 1px solid dimgrey; /* 点击时的边框 */
+}
+
+QToolButton:checked {
+    background: lightblue; /* 被选中时的背景颜色 */
+    border: 1px solid dimgrey; /* 选中时的边框 */
+}

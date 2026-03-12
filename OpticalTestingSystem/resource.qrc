@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/Icon">
+        <file>Icon_images/downloadIcon.png</file>
+        <file>Icon_images/button-restore.svg</file>
+        <file>Icon_images/button-restore.png</file>
+        <file>Icon_images/logo_hx.png</file>
+        <file>Icon_images/checked.png</file>
+        <file>Icon_images/checked_resized.png</file>
+        <file>Icon_images/window_close_icon.png</file>
+        <file>Icon_images/window_maximize_icon.png</file>
+        <file>Icon_images/window_minimize_icon.png</file>
+        <file>Icon_images/window_restore_icon.png</file>
+        <file>Icon_images/creat_PDF_icon.png</file>
+        <file>Icon_images/go_icon.png</file>
+        <file>Icon_images/noImage.jpg</file>
+        <file>QssFiles/dialogQss.qss</file>
+        <file>QssFiles/dockTitleQss.qss</file>
+        <file>QssFiles/mainQss.qss</file>
+    </qresource>
+    <qresource prefix="/"/>
+    <qresource prefix="/ExcelData">
+        <file>ExcelFiles/wavelength_transmittance.xlsx</file>
+    </qresource>
+</RCC>

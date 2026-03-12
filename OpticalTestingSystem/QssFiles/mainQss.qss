@@ -1,0 +1,425 @@
+
+QMainWindow {
+    background: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0,
+        x2: 1, y2: 1,
+		stop: 0 #90CEF5,
+		stop: 1 #FCEAFF	
+    ); /*注意：使用这种方式修饰背景时，四个边角是无法修剪的，一直是直角*/
+    /* background:white; */
+	border-radius:4px; /*给ui界面的四个边角添加一个弧度，更圆润*/
+    /* border:1px solid lightgray; 可选：添加边框 */
+    border: 1px solid transparent;
+    /* border-top-right-radius:10px */
+    /* border-radius: 6px;       可选：设置圆角边框 */
+}
+
+/* 设置菜单栏的背景和渐变效果 */
+QMainWindow::menubar {
+	background-color: transparent;
+    color:white;  
+}
+
+
+/* 让菜单项和子菜单的背景也支持渐变 */
+/* QMenuBar::item {
+    background: transparent;
+    padding: 5px 15px;
+}
+
+QMenuBar::item:selected {
+    background: darkgray;
+    color: white;
+} */
+
+/* QMenuBar{
+	background-color: #90CEF5;
+} */
+
+QLabel {
+    /* color: darkgray; */
+    font-size: 13px;
+}
+/* 设置方框背景颜色，确保勾选时的对钩图标显示*/
+QCheckBox{
+	font-size: 13px;
+}
+
+QCheckBox::indicator {
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgb(126, 120, 120);
+    border-radius: 2px; /* 可选，调整圆角 */
+}
+
+QCheckBox::indicator:checked {
+    /* background-color: #3c8dbc; 选中时背景颜色 */
+	width: 14px;
+    height: 14px;
+    /* border: none; 选中时的边框颜色 */
+	border: 1px solid rgb(126, 120, 120);
+	background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	/* background-image: url("H:/航星代码备份/1. 上位机/2. 红外-崔启胤-光学测试系统/OpticalTestingSystem/Icon_images/checked.png");  */
+	/* background-image: url("C:/Users/P14S/Downloads/checked_resized.png"); */
+	background-image: url(":/Icon/Icon_images/checked_resized.png");
+	/*这行代码最好放在mainwindow.cpp中
+	直接设置，那边可以使用src的文件*/
+}
+
+
+QTabBar::tab
+{ 
+	/* background:white; */
+	
+	border-bottom: 0px solid rgba(255, 242, 251,100);
+	font-family:"微软雅黑";
+	font-size:16px;
+	padding-left:5px;
+	padding-right:5px;
+	min-width: 85px;
+	min-height:30px;		
+}
+
+QTabBar::tab:selected
+{
+	border-bottom: 3px solid rgb(236,65,65);
+	color: rgb(55,55,55);
+	font-size:20px;
+	font-weight: bold;
+}
+
+QDockWidget::title{
+	background-color: lightblue; /* 天蓝色背景 */
+        height: 100px;               /* 标题栏高度 */
+        font: bold 14px;            /* 加粗字体 */
+		/* font-size:20px; */
+        color: black;               /* 字体颜色 */
+        padding-left: 10px;         /* 左侧内边距 */
+}
+
+QDockWidget::close-button, QDockWidget::float-button {
+	border: 1px solid lightblue; /* 去掉边框 */
+	background: white;           /* 按钮背景 */
+	padding: 2px;
+	border-radius: 5px;
+}
+
+/*设置groupbox的标题颜色*/
+QGroupBox::title {
+    color: rgb(5,127,238);
+}
+/*设置MainWindow的背景颜色*/
+/* QMainWindow {
+    background-color: #90CEF5; /* 针对 QMainWindow 设置
+} */
+
+QTableWidget {
+
+    font-family: "Times New Roman", "宋体";  /* 英文用新罗马，中文用宋体 */
+	font-size: 14px;
+	color:#333333;
+	/* background-color: lightblue;  */
+	/* background-color: transparent; */
+    gridline-color: darkgray; /* 设置网格线颜色 */
+    border: none; /* 去除表格的边框 */
+}
+
+/* QTableView {
+    background-color: transparent;
+} */
+/*边框的样式设置*/
+QHeaderView::section {
+    /* background-color: transparent;  背景颜色 */
+	background-color:rgb(192,220,245);
+    color: #333333;            /* 字体颜色 */
+	font-family: "SimHei"; 
+	font-size: 15px;
+    /* font-weight: bold;         字体加粗 */
+    border: 1px solid #d0d0d0; /* 边框颜色 */
+    padding: 4px;              /* 内边距 */
+    text-align: center;        /* 文本居中 */
+}
+/*边框内部的表格线条样式*/
+QTableView QHeaderView::section {
+    /* background-color: transparent; 水平和垂直表头的背景颜色 */
+    border: 1px solid darkgray; /* 边框样式 */
+}
+QTableWidget::item:selected {
+    background-color: rgba(255,255,255,50); /* 选中单元格背景颜色 */
+}
+/* QTableView::horizontalHeader {  */
+    /* background-color: #b0c4de; */
+/* } */
+
+/* QTableView::verticalHeader { /* 垂直标题  无效*/
+    /* background-color: #e6e6fa; */
+/* } */ 
+/* QTableView::corner {
+    background-color: transparent; /* 背景透明 */
+    /* border: none;                  移除边框 */
+/* } */ 
+
+/* QTableWidget#tableWidget_distortion {
+    background-color: transparent;
+} */
+QTableCornerButton::section {
+	/* background-color: #d6dcf6; */
+	/* background-color: rgb(192,220,245);  */
+	background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        /* stop: 0 #f8f8f8, /* 顶部高光 */
+        /* stop: 0.5 #d6dcf6, 中间颜色 */
+        /* stop: 1 #8c8c8c 底部阴影  */
+		/* stop: 0 #90CEF5,
+		stop: 0.5 #bbd4f3, 
+		stop: 1 #d7e0fd */
+		stop: 0 #b2d4f5,
+		stop: 0.5 #bbd4f3, 
+		stop: 1 #d7e0fd
+    );
+    border: 1px solid darkgray;  
+}
+
+QHeaderView::section {
+    background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        /* stop: 0 #f8f8f8, /* 顶部高光 */
+        /* stop: 0.5 #d6dcf6, 中间颜色 */
+        /* stop: 1 #8c8c8c 底部阴影  */
+		/* stop: 0 #90CEF5,
+		stop: 0.5 #bbd4f3, 
+		stop: 1 #d7e0fd */
+		stop: 0 #b2d4f5,
+		stop: 0.5 #bbd4f3, 
+		stop: 1 #d7e0fd
+    );
+    border: 1px solid #8c8c8c;
+    border-top: 2px solid #ffffff; /* 顶部高光 */
+    border-left: 2px solid #ffffff; /* 左侧高光 */
+    border-bottom: 2px solid #666666; /* 底部阴影 */
+    border-right: 2px solid #666666; /* 右侧阴影 */
+    padding: 4px;
+    font-family: "SimHei";
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* QDockWidget::close-button:hover, QDockWidget::float-button:hover {
+	background: lightgray; /* 悬停时按钮背景 */
+/* } */
+
+/* QToolButton{
+								margin-right: 5px;
+								color: black;               /* 字体颜色 */
+                               /* border: 1px solid lightblue;
+                                background: white;
+                                padding: 2px;
+                                border-radius: 5px; */
+/* }  */
+
+/* QToolButton:hover{
+	background: lightgray; /* 悬停时按钮背景 */
+/* }  */
+
+/*其他按钮样式*/
+QPushButton{
+    color:#333333;
+    border: 1px solid #8c8c8c;
+    border-radius: 5px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    /* background-color: #b2d4f5, */
+    background-color: rgb(255,255,255,100);
+}
+QPushButton:hover{
+    color:#333333;
+    border: 1px solid #8c8c8c; /* 按钮边框颜色 */
+    border-radius: 5px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0, x2: 0, y2: 1,
+		stop: 0 #b2d4f5,
+		/* stop: 0.5 #bbd4f3,  */
+		stop: 1 #d7e0fd
+    );
+}
+
+/*主按钮样式*/
+#pushButton_power {
+    color:#333333;
+    border: none; 
+    border-radius: 5px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    background-color: #b2d4f5,
+}
+#pushButton_power:hover{
+    color:#333333;
+    border: 1px solid #8c8c8c; /* 按钮边框颜色 */
+    border-radius: 5px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0, x2: 0, y2: 1,
+		stop: 0 #b2d4f5,
+		/* stop: 0.5 #bbd4f3,  */
+		stop: 1 #d7e0fd
+    ); 
+}
+
+/*主按钮样式*/
+ #pushButton{
+    color:#333333;
+    border: none; 
+    border-radius: 5px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    background-color: #b2d4f5,
+    /* background-color: rgb(255,255,255,100); */
+}
+#pushButton:hover{
+    color:#333333;
+    border: 1px solid #8c8c8c; /* 按钮边框颜色 */
+    border-radius: 5px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0, x2: 0, y2: 1,
+		stop: 0 #b2d4f5,
+		/* stop: 0.5 #bbd4f3,  */
+		stop: 1 #d7e0fd
+    ); 
+}
+/*主按钮样式*/
+#pushButton_start{
+    color:#333333;
+    border: none; 
+    border-radius: 5px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    /* background-color: #b2d4f5, */
+    background-color: rgb(255,255,255,100);
+}
+#pushButton_start:hover{
+    color:#333333;
+    border: 1px solid #8c8c8c; /* 按钮边框颜色 */
+    border-radius: 5px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0, x2: 0, y2: 1,
+		stop: 0 #b2d4f5,
+		/* stop: 0.5 #bbd4f3,  */
+		stop: 1 #d7e0fd
+    ); 
+}
+/*主按钮样式*/
+#pushButton_dataToExcel{
+    color:#333333;
+    border: none; 
+    border-radius: 5px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    /* background-color: #b2d4f5, */
+    background-color: rgb(255,255,255,255);
+}
+#pushButton_dataToExcel:hover{
+    color:#333333;
+    border: 1px solid #8c8c8c; /* 按钮边框颜色 */
+    border-radius: 5px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0, x2: 0, y2: 1,
+		stop: 0 #b2d4f5,
+		/* stop: 0.5 #bbd4f3,  */
+		stop: 1 #d7e0fd
+    ); 
+}
+/*主按钮样式*/
+#pushButton_print{
+    color:#333333;
+    border: none; 
+    border-radius: 5px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    /* background-color: #b2d4f5, */
+    background-color: rgb(255,255,255,100);
+}
+#pushButton_print:hover{
+    color:#333333;
+    border: 1px solid #8c8c8c; /* 按钮边框颜色 */
+    border-radius: 5px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0, x2: 0, y2: 1,
+		stop: 0 #b2d4f5,
+		/* stop: 0.5 #bbd4f3,  */
+		stop: 1 #d7e0fd
+    ); 
+}
+
+QLineEdit {
+    /* background-color: rgb(171, 210, 235);  下拉框的背景色 */
+    font-family: "Times New Roman","SimSun";
+    /* background-color: rgb(195,222,251); */
+    background-color: rgba(255,255,255,125);
+    font-size: 14px
+}
+
+
+#comboBox_camera{
+    /* background-color: rgb(171, 210, 235);  下拉框的背景色 */
+    font-family: "Times New Roman","SimSun";
+    /* background-color: rgb(195,222,251); */
+    background-color: rgba(255,255,255,125);
+    font-size: 14px
+} 
+
+#lineEdit_officialLensOpticalPower{
+    /* background-color: rgb(171, 210, 235);  下拉框的背景色 */
+    font-family: "Times New Roman","SimSun";
+    /* background-color: rgb(195,222,251); */
+    background-color: rgba(255,255,255,125);
+    font-size: 14px
+}
+/* QTabWidget QComboBox {
+    font-family: "Times New Roman";
+    /* background-color: rgb(171, 210, 235);  下拉框的背景色 */
+    /* background-color: rgb(195,222,251); */
+/* } */
+
+/* QDockWidget QComboBox {
+    font-family: "Times New Roman";
+    /* background-color: rgb(171, 210, 235);  下拉框的背景色 */
+    /* background-color: rgba(255,255,255,125); */
+/* }  */
+
+QComboBox QAbstractItemView {
+    background-color: rgba(195,222,251,100);
+    border: 1px solid #cccccc;  /* 下拉框边框颜色 */
+    border-radius: 3px;  
+    font-size: 14px;  /* 设置字体大小 */
+}
+
+QComboBox::item:selected {
+    background-color: rgb(171, 210, 235); /* 默认选择项的背景色 */
+    color: white; /* 默认选择项的字体颜色 */
+}
+
+QMenu {
+    background-color: white;  /* 设置菜单背景颜色 */
+    color: white;  /* 设置菜单文本颜色 */
+}
+
+QMenu::item {
+    background-color: rgb(195,222,251);  /* 设置选项的背景颜色 */
+    color: #333333;
+}
+
+QMenu::item:selected {
+    background-color: rgb(171, 210, 235);  /* 设置选中项的背景颜色 */
+    color: white;
+}

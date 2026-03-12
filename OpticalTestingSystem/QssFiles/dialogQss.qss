@@ -1,0 +1,16 @@
+/*设置dialog的背景颜色*/
+/*没有效果，因为在mainwindow.cpp中已经定义了全局的样式*/
+QDialog {
+    background-color: #90CEF5; 
+}
+QGroupBox{
+	background-color:rgb(234,247,255);
+}
+
+QLineEdit{
+	background-color: rgb(238,245,253);
+}
+
+QLabel{
+	background-color:rgb(234,247,255);
+}

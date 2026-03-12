@@ -1,0 +1,43 @@
+# Qt build
+build/
+debug/
+release/
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Libraries
+*.dll
+*.so
+*.dylib
+
+# Object files
+*.o
+*.obj
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+*.qbs.user
+
+# Generated Qt files
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

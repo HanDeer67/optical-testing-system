@@ -1,0 +1,18 @@
+// 在转换为QPixmap之前添加检查
+if (image.isNull()) {
+    qDebug() << "Image is null!";
+    return;
+}
+
+qDebug() << "Image format:" << image.format();
+qDebug() << "Image size:" << image.size();
+qDebug() << "Image depth:" << image.depth();
+qDebug() << "Bytes per line:" << image.bytesPerLine();
+
+// 尝试转换
+QPixmap pixmap;
+bool success = pixmap.convertFromImage(image);
+if (!success) {
+    qDebug() << "Failed to convert image to pixmap!";
+    return;
+} 
